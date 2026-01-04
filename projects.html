@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Elly Bachubila</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+      }
+      nav {
+        margin-bottom: 40px;
+      }
+      nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #333;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .projects-list {
+        list-style: none;
+        padding: 0;
+      }
+      .projects-list li {
+        margin-bottom: 20px;
+      }
+      .projects-list a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      .projects-list a:hover {
+        text-decoration: underline;
+      }
+      .project-description {
+        margin-top: 5px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/projects.html">Projects</a>
+    </nav>
+
+    <main>
+      <h1>Projects</h1>
+      <ul class="projects-list">
+        <li>
+          <a href="https://www.npmjs.com/package/trysafely" target="_blank"
+            >trysafely</a
+          >
+          <div class="project-description">
+            A TypeScript utility helper to simplify error handling.
+          </div>
+        </li>
+        <li>
+          <a href="https://npmjs.com/package/tryio" target="_blank">tryio</a>
+          <div class="project-description">
+            A beginner-friendly TypeScript library for working with asynchronous
+            I/O.
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
