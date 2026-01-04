@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Elly Bachubila</title>
+    <meta
+      name="description"
+      content="View projects by Elly Bachubila - TypeScript libraries including trysafely, tryio, and more."
+    />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <style>
       body {
@@ -24,8 +28,11 @@
         align-items: center;
         gap: 6px;
       }
-      nav a:hover {
+      nav a:hover,
+      nav a:focus {
         text-decoration: underline;
+        outline: 2px solid #000;
+        outline-offset: 2px;
       }
       .projects-list {
         list-style: none;
@@ -40,8 +47,11 @@
         font-weight: bold;
         font-size: 1.1rem;
       }
-      .projects-list a:hover {
+      .projects-list a:hover,
+      .projects-list a:focus {
         text-decoration: underline;
+        outline: 2px solid #000;
+        outline-offset: 2px;
       }
       .project-description {
         margin-top: 5px;
@@ -50,16 +60,19 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <a href="/">Home</a>
-      <a href="/projects.html">Projects</a>
+      <a href="/projects.html" aria-current="page">Projects</a>
     </nav>
 
-    <main>
+    <main id="main-content">
       <h1>Projects</h1>
       <ul class="projects-list">
         <li>
-          <a href="https://www.npmjs.com/package/trysafely" target="_blank"
+          <a
+            href="https://www.npmjs.com/package/trysafely"
+            target="_blank"
+            aria-label="View trysafely npm package"
             >trysafely</a
           >
           <div class="project-description">
@@ -67,7 +80,12 @@
           </div>
         </li>
         <li>
-          <a href="https://npmjs.com/package/tryio" target="_blank">tryio</a>
+          <a
+            href="https://npmjs.com/package/tryio"
+            target="_blank"
+            aria-label="View tryio npm package"
+            >tryio</a
+          >
           <div class="project-description">
             A beginner-friendly TypeScript library for working with asynchronous
             I/O.
@@ -75,5 +93,33 @@
         </li>
       </ul>
     </main>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Projects - Elly Bachubila",
+        "description": "View projects by Elly Bachubila - TypeScript libraries including trysafely, tryio, and more.",
+        "url": "https://bachubila.com/projects.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "name": "trysafely",
+              "description": "A TypeScript utility helper to simplify error handling.",
+              "url": "https://www.npmjs.com/package/trysafely"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "tryio",
+              "description": "A beginner-friendly TypeScript library for working with asynchronous I/O.",
+              "url": "https://npmjs.com/package/tryio"
+            }
+          ]
+        }
+      }
+    </script>
   </body>
 </html>
